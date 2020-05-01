@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="User-friendly mapping" />
+		<meta name="author" content="Napkin AS" />
+
+    <title>Napkin GIS</title>
+
+    <link rel="icon" href="assets/logo.png" />
+
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+      window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+
+      ga("create", "UA-159004840-1", "auto");
+      ga("send", "pageview");
+    </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!--script async src="https://www.googletagmanager.com/gtag/js?id=UA-159004840-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+
+			gtag('config', 'UA-159004840-1');
+		</script-->
+
+
+
+    <!-- Font-Awesome CDN imports -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+		<!-- Bootstrap CSS CDN import -->
+		<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css" />
+
+    <style type="text/css">
+			body { margin-top: 0 !important; }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+			#coverJumbotron {
+				background-image: url("assets/jumbotron.jpg");
+				background-position: top;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			#jumbotronText {
+				color: #e6e6e6;
+				text-shadow: #000 1px 1px 4px;
+				-webkit-font-smoothing: antialiased;
+			}
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+		<!-- Custom styles -->
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+  <!--div class="modal fade" id="requestDemoModal" tabindex="-1" role="dialog" aria-labelledby="requestDemoModalLabel" aria-hidden="true">
+    <form id="requestForm">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="requestDemoModalLabel">Request a demo</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body container-fluid">
+
+            <div class="row">
+              <div class="col-sm-12 col-md-2"></div>
+              <div class="col-sm-12 col-md-8">
+                <p class="text-center">
+                  We are currently working on finalizing NapkinGIS, and would greatly appreciate any and all feedback.
+                </p>
+                <p class="text-center">
+                  If you are interested in contributing to the testing and possibly becoming an early adopter, fill inn the form below.
+                </p>
+              </div>
+              <div class="col-sm-12 col-md-2"></div>
+            </div>
+
+            <br />
+
+            <div class="row">
+              <div class="col form-group">
+                <label for="fullName">Your name</label>
+                <input type="text" class="form-control" id="fullName" placeholder="" required />
+              </div>
+            </div>
+
+            <br />
+
+            <div class="row">
+              <div class="col form-group">
+                <label for="title">Job title</label>
+                <input type="text" class="form-control" id="title" placeholder="" required />
+              </div>
+            </div>
+
+            <br />
+
+            <div class="row">
+              <div class="col form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="" required />
+              </div>
+            </div>
+
+            <br />
+
+            <div class="row">
+              <div class="col form-group">
+                <label for="company">Company name</label>
+                <input type="text" class="form-control" id="company" placeholder="" required />
+              </div>
+            </div>
+
+            <br />
+
+            <div class="row">
+              <div class="col form-group">
+                <label for="message">What are you hoping to learn about NapkinGIS?</label>
+                <textarea class="form-control" id="message" rows="4" required></textarea>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" id="sendRequest" data-dismiss="modal">Send</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div-->
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt="Napkin GIS logo" />
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">Pricing</a>
+          </li>
+        </ul>
+
+        <a class="btn btn-outline-light" role="button" href="https://www.linkedin.com/company/napkin-as/" target="_blank" id="linkedin">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+
+        <a class="btn btn-outline-light" role="button" href="https://www.facebook.com/napkingis" target="_blank" id="facebook">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+
+        <a class="btn btn-outline-light" role="button" href="https://twitter.com/napkingis" target="_blank" id="twitter">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <main role="main">
+
+		<div class="jumbotron shadow" id="coverJumbotron">
+			<div class="container">
+				<center>
+					<h1 class="display-4" id="jumbotronText">
+						<br /><br /><br /><br />
+						The user-friendly GIS solution
+					</h1>
+					<!--p id="jumbotronText">
+						The user-friendly GIS solution
+						Easy, intuitive, powerful
+					</p-->
+				</center>
+			</div>
+		</div>
+
+    <div class="container">
+
+			<br /><br />
+
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <a role="button" href="demo.html" class="btn btn-lg btn-outline-info">Request a demo</a>
+        </div>
+      </div>
+
+      <hr class="featurette-divider" style="margin-top: 40px;" />
+
+      <div class="row">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">NapkinGIS. <span class="text-muted">User-friendly mapping.</span></h2>
+          <p class="lead">
+            NapkinGIS is a web-based Geographical Information System ( <strong>GIS</strong> ) software built to get the job done faster, easier and cheaper.
+            Learn more about NapkinGIS in the details below.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="assets/exhib.png" />
+        </div>
+      </div>
+
+      <hr class="featurette-divider" />
+
+      <div class="row">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">The power of GIS. <span class="text-muted">At your fingertips.</span></h2>
+          <p class="lead">
+            We bring you the power of GIS, fully integrated with all your business systems.
+						Through the NapkinGIS software, we offer a variety of fully interconnected GIS software packages.
+            This makes NapkinGIS unrivaled in both feature-set and extendability.
+						No workload is out of NapkinGIS' reach.
+          </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="assets/gis.jpg" />
+        </div>
+      </div>
+
+      <hr class="featurette-divider" />
+
+      <div class="row">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">GIS. <span class="text-muted">What is it?</span></h2>
+          <p class="lead">
+            GIS is a common term used for all geospacial data-processing software.
+            GIS is used in everything from space-travel to logistics.
+            Watch this Ted Talk explaining GIS.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <!--svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg-->
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9V_Mz7NDy3o" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+
+
+
+      <div class="row">
+        <div class="col">
+          <h3 class="text-center">All the features you need.</h3>
+        </div>
+      </div>
+
+			<br /><br />
+
+			<div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12"> <br />
+          <h4>
+						<i class="fa fa-firefox" style="color: #cc5200;"></i>
+						Cross-platform
+					</h4>
+					<p>Windows, Mac, Linux, Mobile - NapkinGIS is web-based and available on all platforms.</p>
+        </div>
+
+				<div class="col-lg-3 col-md-6 col-sm-12"> <br />
+					<h4>
+						<i class="fa fa-cubes" style="color: #0052cc;"></i>
+						Compatibility
+					</h4>
+					<p>NapkinGIS is compatible with all existing GIS software, right out of the box. No need for tedious migration processes.</p>
+        </div>
+
+				<div class="col-lg-3 col-md-6 col-sm-12"> <br />
+					<h4>
+						<i class="fa fa-code" style="color: #008040;"></i>
+						OSS software
+					</h4>
+					<p>NapkinGIS is built exclusively with OSS software, making it a product of the best solutions the community has to offer.</p>
+        </div>
+
+				<div class="col-lg-3 col-md-6 col-sm-12"> <br />
+					<h4>
+						<i class="fa fa-file" style="color: #999999;"></i>
+						Open standards
+					</h4>
+					<p>Web Map Services, Tile Map Services, Web Feature Services. NapkinGIS proudly supports all OGC-compliant standards.</p>
+        </div>
+      </div>
+
+      <br /><br /><br />
+
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <a role="button" href="demo.html" class="btn btn-lg btn-info">Request a demo</a>
+        </div>
+      </div>
+
+			<hr class="featurette-divider">
+
+
+
+
+			<div class="row">
+				<div class="col-md-6"><br />
+					<h5>DISCLAIMER</h5>
+					<p>Under no circumstances shall Napkin AS or the NapkinGIS project members be liable in any form or manner for the actual use of this page, software or data made available in this page.</p>
+				</div>
+
+				<div class="col-md-6"><br />
+					<h5>THIS WEB PAGE USES COOKIES</h5>
+					<p>This web page uses cookies for collecting usage information and for analysis of performance. Some of the cookies are from third party. By continuing to browse the site, you are agreeing to our use of cookies.</p>
+				</div>
+			</div>
+
+			<br /><br /><br />
+
+
+
+
+    <!--
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="bd-placeholder-img rounded-circle" width="140" height="140" />
+          <h2>[CEO 1]</h2>
+          <p>[Statement]</p>
+          <p>
+            <a class="btn btn-outline-secondary" href="#" role="button">View details »</a>
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <img class="bd-placeholder-img rounded-circle" width="140" height="140" />
+          <h2>[CEO 2]</h2>
+          <p>[Statement]</p>
+          <p>
+            <a class="btn btn-outline-secondary" href="#" role="button">View details »</a>
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <img class="bd-placeholder-img rounded-circle" width="140" height="140" />
+          <h2>[CEO 3]</h2>
+          <p>[Statement]</p>
+          <p>
+            <a class="btn btn-outline-secondary" href="#" role="button">View details »</a>
+          </p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+    -->
+
+    </div>
+
+
+    <footer class="container">
+      <p class="float-right"><a href="#">Back to top</a></p>
+      <p>© <span id="ccYear">2020</span> Napkin AS · <a href="terms.html">Terms</a> · <a href="technologies.html">Technologies</a></p>
+    </footer>
+  </main>
+
+
+  <!-- jQuery - Popper.js - Bootstrap JS CDN imports -->
+  <script src="lib/jquery/jquery-3.3.1.min.js"></script>
+  <script src="lib/popper/popper.min.js"></script>
+  <script src="lib/bootstrap/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+    $("span#ccYear").html(new Date().getFullYear());
+  </script>
+
+</body>
+</html>

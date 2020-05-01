@@ -1,0 +1,56 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+body {
+  margin-top: 3.5rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3rem;
+}
+
+.btn,
+.jumbotron,
+.modal-content,
+input,
+textarea {
+  border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+}
+
+a#linkedin,
+a#facebook,
+a#twitter {
+  margin-left: 15px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 0rem;
+  }
+}
