@@ -13,6 +13,13 @@ $("button#sendRequest").click(function(ev) {
       company = $("input#company").val(),
       message = $("textarea#message").val();
 
+  if(!name || name.replace(/\s/g, '') === ''
+  || !title || title.replace(/\s/g, '') === ''
+  || !email || email.replace(/\s/g, '') === ''
+  || !company || company.replace(/\s/g, '') === ''
+  || !message || message.replace(/\s/g, '') === '')
+    return;
+
   $("#loadingModal").modal("show");
 
   db.collection("requests").add({

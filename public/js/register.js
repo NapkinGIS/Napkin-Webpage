@@ -12,6 +12,12 @@ $("button#sendRequest").click(function(ev) {
       email = $("input#email").val(),
       company = $("input#company").val();
 
+  if(!name || name.replace(/\s/g, '') === ''
+  || !title || title.replace(/\s/g, '') === ''
+  || !email || email.replace(/\s/g, '') === ''
+  || !company || company.replace(/\s/g, '') === '')
+    return;
+
   $("#loadingModal").modal("show");
 
   db.collection("requests").add({
@@ -24,7 +30,7 @@ $("button#sendRequest").click(function(ev) {
     //console.log("Document written with ID: ", docRef.id);
 
     setTimeout(function() {
-      window.location.assign("visual/index.html#reg");
+      window.location.assign("visual/index.html");
     }, 500);
   })
   .catch(function(error) {

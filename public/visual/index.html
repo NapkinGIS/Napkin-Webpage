@@ -200,12 +200,6 @@
 
     <!-- Interact with Kepler map store -->
     <script type="text/javascript">
-      function redirect() { window.location.assign('/register.html'); }
-
-      let c = window.location.href.split(/\#/ig)[1], check;
-      if(c) { isReg = c.match(/reg/ig) !== null; }else{ redirect(); }
-      if(!isReg) { redirect(); }
-
       /**
        * Customize map.
        * Interact with map store to customize data and behavior
