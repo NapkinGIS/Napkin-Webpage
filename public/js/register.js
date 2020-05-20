@@ -5,7 +5,10 @@ $("form#requestForm").submit(function(ev) {
 });
 
 $("button#sendRequest").click(function(ev) {
-  let db = firebase.firestore();
+  const client = new Client(
+    "https://crm.napkingis.no",
+    "c3be3e3271d7d6f221883ac8ca916be1"
+  );
 
   let name = $("input#fullName").val(),
       title = $("input#title").val(),
@@ -20,20 +23,26 @@ $("button#sendRequest").click(function(ev) {
 
   $("#loadingModal").modal("show");
 
-  db.collection("requests").add({
-    name: name,
-    title: title,
-    email: email,
-    company: company
-  })
-  .then(function(docRef) {
-    //console.log("Document written with ID: ", docRef.id);
+  let n = name.split(/\ /ig);
+  let lastName = n[n.length - 1];
+  n.pop();
+  let firstName = n.join(' ');
 
+  client.request("POST", "Lead", {
+    firstName: firstName,
+    lastName: lastName,
+    title: title,
+    emailAddress: email,
+    accountName: company
+  })
+  .then((response) => {
     setTimeout(function() {
       window.location.assign("visual/index.html");
     }, 500);
   })
-  .catch(function(error) {
+  .catch((res) => {
+    console.log(res.statusCode, res.statusMessage);
+
     setTimeout(function() {
       $("#loadingModal").modal("hide");
 
