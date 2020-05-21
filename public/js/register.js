@@ -5,8 +5,6 @@ $("form#requestForm").submit(function(ev) {
 });
 
 $("button#sendRequest").click(function(ev) {
-  let db = firebase.firestore();
-
   let name = $("input#fullName").val(),
       title = $("input#title").val(),
       email = $("input#email").val(),
@@ -20,32 +18,54 @@ $("button#sendRequest").click(function(ev) {
 
   $("#loadingModal").modal("show");
 
-  db.collection("requests").add({
-    name: name,
+  let payload = {
+    emailAddress: email,
     title: title,
-    email: email,
-    company: company
-  })
-  .then(function(docRef) {
-    //console.log("Document written with ID: ", docRef.id);
+    accountName: company,
+    description: "_"
+  };
 
-    setTimeout(function() {
-      window.location.assign("visual/index.html");
-    }, 500);
-  })
-  .catch(function(error) {
-    setTimeout(function() {
-      $("#loadingModal").modal("hide");
+  let n = name.split(/\ /ig);
+  if(n.length < 2) {
+    payload.lastName = "_";
+    payload.firstName = name;
+  }else{
+    payload.lastName = n.pop();
+    payload.firstName = n.join(' ');
+  }
 
-      $("#alertArea").html(`
-        <div class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\" style=\"max-width: 500px; float: right;\">
-          <strong>Error!</strong> Sorry, something went wrong. Please refresh the page and try again.
+  $.ajax({
+    type: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    url: "https://crm.napkingis.no:443/api/v1/LeadCapture/0d06fdd55cea242ccbf31e31f5852deb",
+    //contentType: "application/json",
+    data: JSON.stringify(payload),
+    //dataType: "json",
+    success: function(result, status, xhr) {
+      setTimeout(function() {
+        window.location.assign("visual/index.html");
+      }, 500);
+    },
+    error: function(xhr, status, error) {
+      console.log(xhr.status);
+      console.log(error);
 
-          <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
-            <span aria-hidden=\"true\">&times;</span>
-          </button>
-        </div>
-      `);
-    }, 500);
+      setTimeout(function() {
+        $("#loadingModal").modal("hide");
+
+        $("#alertArea").html(`
+          <div class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\" style=\"max-width: 500px; float: right;\">
+            <strong>Error!</strong> Sorry, something went wrong. Please refresh the page and try again.
+
+            <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+              <span aria-hidden=\"true\">&times;</span>
+            </button>
+          </div>
+        `);
+      }, 500);
+    }
   });
 });
