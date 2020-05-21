@@ -29,7 +29,7 @@ $("button#sendRequest").click(function(ev) {
 
   let n = name.split(/\ /ig);
   if(n.length < 2) {
-    payload.lastName = '\ ';
+    payload.lastName = "_";
     payload.firstName = name;
   }else{
     payload.lastName = n.pop();
@@ -38,10 +38,14 @@ $("button#sendRequest").click(function(ev) {
 
   $.ajax({
     type: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
     url: "https://crm.napkingis.no:443/api/v1/LeadCapture/0d06fdd55cea242ccbf31e31f5852deb",
-    contentType: "application/json",
-    data: payload,
-    dataType: "json",
+    //contentType: "application/json",
+    data: JSON.stringify(payload),
+    //dataType: "json",
     success: function(result, status, xhr) {
       setTimeout(function() {
         $("#loadingModal").modal("hide");
