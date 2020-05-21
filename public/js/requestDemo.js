@@ -20,24 +20,28 @@ $("button#sendRequest").click(function(ev) {
 
   $("#loadingModal").modal("show");
 
+  let payload = {
+    emailAddress: email,
+    title: title,
+    accountName: company,
+    description: message
+  };
+
   let n = name.split(/\ /ig);
-  let lastName = n[n.length - 1];
-  n.pop();
-  let firstName = n.join(' ');
+  if(n.length < 2) {
+    payload.lastName = '\ ';
+    payload.firstName = name;
+  }else{
+    payload.lastName = n.pop();
+    payload.firstName = n.join(' ');
+  }
 
   $.ajax({
     type: "POST",
-    url: "https://crm.napkingis.no/napkin/api.php",
-    //contentType: "application/json",
-    data: {
-      firstName: firstName,
-      lastName: lastName,
-      title: title,
-      emailAddress: email,
-      accountName: company,
-      description: message
-    },
-    //dataType: "json",
+    url: "https://crm.napkingis.no:443/api/v1/LeadCapture/0d06fdd55cea242ccbf31e31f5852deb",
+    contentType: "application/json",
+    data: payload,
+    dataType: "json",
     success: function(result, status, xhr) {
       setTimeout(function() {
         $("#loadingModal").modal("hide");
