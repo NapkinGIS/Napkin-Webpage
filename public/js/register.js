@@ -21,8 +21,7 @@ $("button#sendRequest").click(function(ev) {
   let payload = {
     emailAddress: email,
     title: title,
-    accountName: company,
-    description: "_"
+    accountName: company
   };
 
   let n = name.split(/\ /ig);

@@ -8,12 +8,14 @@ $("button#sendRequest").click(function(ev) {
   let name = $("input#fullName").val(),
       title = $("input#title").val(),
       email = $("input#email").val(),
+      phone = $("input#phone").val(),
       company = $("input#company").val(),
       message = $("textarea#message").val();
 
   if(!name || name.replace(/\s/g, '') === ''
   || !title || title.replace(/\s/g, '') === ''
   || !email || email.replace(/\s/g, '') === ''
+  || !phone || phone.replace(/\s/g, '') === ''
   || !company || company.replace(/\s/g, '') === ''
   || !message || message.replace(/\s/g, '') === '')
     return;
@@ -22,6 +24,7 @@ $("button#sendRequest").click(function(ev) {
 
   let payload = {
     emailAddress: email,
+    phoneNumber: phone,
     title: title,
     accountName: company,
     description: message
@@ -42,7 +45,7 @@ $("button#sendRequest").click(function(ev) {
       "Content-Type": "application/json",
       "Accept": "application/json"
     },
-    url: "https://crm.napkingis.no:443/api/v1/LeadCapture/0d06fdd55cea242ccbf31e31f5852deb",
+    url: "https://crm.napkingis.no:443/api/v1/LeadCapture/3abe73a6b8f1202c5c5814d4b676f9f1",
     //contentType: "application/json",
     data: JSON.stringify(payload),
     //dataType: "json",
