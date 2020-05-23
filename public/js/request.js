@@ -64,7 +64,7 @@ $("button#sendRequest").click(function(ev) {
         `);
 
         setTimeout(function() {
-          window.location.assign("index.html");
+          window.location.assign("/index.html");
         }, 6000);
       }, 500);
     },
