@@ -21,8 +21,7 @@ $("button#sendRequest").click(function(ev) {
   let payload = {
     emailAddress: email,
     title: title,
-    accountName: company,
-    description: "_"
+    accountName: company
   };
 
   let n = name.split(/\ /ig);
@@ -46,7 +45,7 @@ $("button#sendRequest").click(function(ev) {
     //dataType: "json",
     success: function(result, status, xhr) {
       setTimeout(function() {
-        window.location.assign("visual/index.html");
+        window.location.assign("/visual/sample.html");
       }, 500);
     },
     error: function(xhr, status, error) {

@@ -10,7 +10,7 @@
 
 	<title>Napkin</title>
 
-	<link rel="icon" href="assets/logo.svg" />
+	<link rel="icon" href="/assets/logo.svg" />
 
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -24,31 +24,15 @@
 
 
 	<!-- Font-Awesome imports -->
-	<link rel="stylesheet" href="lib/font-awesome/all.css" />
+	<link rel="stylesheet" href="/lib/font-awesome/all.css" />
 
-	<!-- Bootstrap CSS CDN import -->
-	<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css" />
+	<!-- Bootstrap CSS import -->
+	<link rel="stylesheet" href="/lib/bootstrap/bootstrap.min.css" />
 
-	<style type="text/css">
-
-		.bd-placeholder-img {
-			font-size: 1.125rem;
-			text-anchor: middle;
-			-webkit-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-			user-select: none;
-		}
-
-		@media (min-width: 768px) {
-			.bd-placeholder-img-lg {
-				font-size: 3.5rem;
-			}
-		}
-	</style>
+	<style type="text/css"></style>
 
 	<!-- Custom styles -->
-	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="/css/main.css" />
 </head>
 
 <body>
@@ -56,8 +40,8 @@
 	<header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
 
-      <a class="navbar-brand" href="index.html">
-        <img src="assets/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="Napkin logo" />
+      <a class="navbar-brand" href="/index.html">
+        <img src="/assets/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="Napkin logo" />
       </a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,16 +51,16 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="/index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="/about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="/contact.html">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pricing.html">Pricing</a>
+            <a class="nav-link" href="/pricing.html">Pricing</a>
           </li>
         </ul>
 
@@ -84,12 +68,12 @@
           <i class="fab fa-linkedin-in" aria-hidden="true"></i>
         </a>
 
-        <a class="btn btn-outline-light" role="button" href="https://www.facebook.com/napkingis" target="_blank" id="facebook">
-          <i class="fab fa-facebook" aria-hidden="true"></i>
-        </a>
-
         <a class="btn btn-outline-light" role="button" href="https://twitter.com/napkingis" target="_blank" id="twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+
+        <a class="btn btn-outline-light" role="button" href="https://github.com/napkingis" target="_blank" id="github">
+          <i class="fab fa-github" aria-hidden="true"></i>
         </a>
       </div>
 
@@ -100,7 +84,7 @@
 
     <div class="container">
 
-      <hr class="featurette-divider">
+      <hr class="featurette-divider" />
 
       <div class="row">
         <div class="col">
@@ -116,21 +100,21 @@
         </div>
       </div>
 
-      <hr class="featurette-divider">
+      <hr class="featurette-divider" />
 
     </div>
 
 
 		<footer class="container">
-      <p>© <span id="ccYear">2020</span> Napkin AS · <a href="terms.html">Terms</a></p>
+      <p>© <span id="ccYear">2020</span> Napkin AS · <a href="/terms.html">Terms</a></p>
     </footer>
   </main>
 
 
 	<!-- jQuery - Popper.js - Bootstrap JS CDN imports -->
-  <script src="lib/jquery/jquery-3.3.1.min.js"></script>
-  <script src="lib/popper/popper.min.js"></script>
-  <script src="lib/bootstrap/bootstrap.min.js"></script>
+  <script src="/lib/jquery/jquery-3.3.1.min.js"></script>
+  <script src="/lib/popper/popper.min.js"></script>
+  <script src="/lib/bootstrap/bootstrap.min.js"></script>
 
   <script type="text/javascript">
     $("span#ccYear").html(new Date().getFullYear());
