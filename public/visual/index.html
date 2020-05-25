@@ -30,6 +30,13 @@
 	<link rel="stylesheet" href="/lib/bootstrap/bootstrap.min.css" />
 
   <style type="text/css">
+		#try_now {
+			position: fixed;
+			right: 0;
+			bottom: 0;
+			z-index: 2;
+		}
+
     @media (max-width: 768px) {
 			.featurette-heading {
 				font-size: 50px;
@@ -89,13 +96,15 @@
 
   <main role="main">
 
+		<a role="button" href="/visual/register.html" class="btn btn-md btn-info" id="try_now">Try Napkin Visual now</a>
+
 		<div class="container">
 
-      <hr class="featurette-divider" />
+      <hr class="featurette-divider" style="margin-top: 0; margin-bottom: 3rem;" />
 
       <div class="row">
         <div class="col">
-          <h2 class="featurette-heading">Introducing Napkin Visual</h2>
+					<h2 class="featurette-heading">Introducing Napkin Visual</h2>
 					<br />
 					<p class="lead">
 						Napkin Visual is a powerful and intuitive spatial analysis tool that enables you to seamlessly create and deploy beautiful visualizations with little to no effort.
@@ -103,27 +112,19 @@
         </div>
       </div>
 
-      <hr class="featurette-divider" />
-
-      <div class="row featurette">
-        <div class="col d-flex justify-content-center">
-          <a role="button" href="/visual/register.html" class="btn btn-lg btn-info" style="padding: .8rem 3rem;">Try Napkin Visual now</a>
-        </div>
-      </div>
-
-			<hr class="featurette-divider" />
+			<br /><br />
 
 			<div class="row featurette">
-        <div class="col-md-1"></div>
-        <div class="col-md-10">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
           <div class="embed-responsive embed-responsive-16by9">
-            <video controls>
+            <video controls poster="/assets/jumbotron.png">
               <source src="https://crm.napkingis.no/napkin/napkin_visual_1080.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
-        <div class="col-md-1"></div>
+        <div class="col-md-2"></div>
       </div>
 
       <hr class="featurette-divider" />
