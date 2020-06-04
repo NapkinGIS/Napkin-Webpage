@@ -28,6 +28,18 @@ a#github {
   margin-left: 15px;
 }
 
+@media (max-width: 768px) {
+  #md-margin-bottom {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  #lg-margin-bottom {
+    margin-bottom: 50px;
+  }
+}
+
 
 /* Featurettes
 ------------------------- */
