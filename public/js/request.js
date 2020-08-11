@@ -1,6 +1,6 @@
 /*©agpl*************************************************************************
 *                                                                              *
-* Napkin Visual – Visualisation solution for the NapkinGIS platform            *
+* Napkin Homepage – Codebase for the napkingis.no homepage                     *
 * Copyright (C) 2020  Napkin AS                                                *
 *                                                                              *
 * This program is free software: you can redistribute it and/or modify         *
@@ -84,7 +84,7 @@ $("button#sendRequest").click(function(ev) {
         `);
 
         setTimeout(function() {
-          window.location.assign("/index.html");
+          window.location.assign("index.html");
         }, 6000);
       }, 500);
     },

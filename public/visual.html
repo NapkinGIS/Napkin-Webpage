@@ -1,7 +1,7 @@
 <!--
 /*©agpl*************************************************************************
 *                                                                              *
-* Napkin Visual – Visualisation solution for the NapkinGIS platform            *
+* Napkin Homepage – Codebase for the napkingis.no homepage                     *
 * Copyright (C) 2020  Napkin AS                                                *
 *                                                                              *
 * This program is free software: you can redistribute it and/or modify         *
@@ -32,7 +32,7 @@
 
 	<title>Napkin</title>
 
-	<link rel="icon" href="/assets/logo.svg" />
+	<link rel="icon" href="assets/logo.svg" />
 
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -46,42 +46,30 @@
 
 
 	<!-- Font-Awesome imports -->
-	<link rel="stylesheet" href="/lib/font-awesome/all.css" />
+	<link rel="stylesheet" href="lib/font-awesome/all.css" />
 
 	<!-- Bootstrap CSS import -->
-	<link rel="stylesheet" href="/lib/bootstrap/bootstrap.min.css" />
+	<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css" />
 
-	<style type="text/css"></style>
+  <style type="text/css">
+    @media (max-width: 768px) {
+			.featurette-heading {
+				font-size: 50px;
+			}
+    }
+  </style>
 
 	<!-- Custom styles -->
-	<link rel="stylesheet" href="/css/main.css" />
+	<link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
 
-	<div class="modal fade" id="loadingModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="loadingModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="loadingModalLabel">Registering...</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="spinner-border text-primary" role="status">
-						<span class="sr-only">Loading...</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
 
-      <a class="navbar-brand" href="/index.html">
-        <img src="/assets/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="Napkin logo" />
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="Napkin logo" />
       </a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -91,16 +79,16 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/index.html">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/about.html">About</a>
+            <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/contact.html">Contact</a>
+            <a class="nav-link" href="contact.html">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pricing.html">Pricing</a>
+            <a class="nav-link" href="pricing.html">Pricing</a>
           </li>
         </ul>
 
@@ -120,93 +108,103 @@
     </nav>
   </header>
 
+
   <main role="main">
 
-    <div class="container">
+		<div class="container">
 
-      <hr class="featurette-divider" style="margin-top: 0;" />
+      <hr class="featurette-divider" style="margin-top: 0; margin-bottom: 3rem;" />
 
       <div class="row">
         <div class="col">
-          <h2 class="featurette-heading text-center">Register</h2>
-          <br />
-          <p class="lead text-center">
-						Before trying out Napkin Visual, please fill inn the form below to register for free
+					<h2 class="featurette-heading">Introducing Napkin Visual</h2>
+					<br />
+					<p class="lead">
+						Napkin Visual is a powerful and intuitive spatial analysis tool that enables you to seamlessly create and deploy beautiful visualizations with little to no effort.
           </p>
         </div>
       </div>
 
-      <form id="requestForm">
+			<br /><br />
 
-        <br /><br /><br />
-
-        <div class="row">
-          <div class="col form-group">
-            <label for="fullName">Your name</label>
-            <input type="text" class="form-control" id="fullName" placeholder="" required />
+			<div class="row featurette">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <div class="embed-responsive embed-responsive-16by9">
+            <video controls poster="assets/jumbotron.png">
+              <source src="https://crm.napkingis.no/napkin/napkin_visual_1080.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
-
-        <br />
-
-        <div class="row">
-          <div class="col form-group">
-            <label for="title">Job title</label>
-            <input type="text" class="form-control" id="title" placeholder="" required />
-          </div>
-        </div>
-
-        <br />
-
-        <div class="row">
-          <div class="col form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="" required />
-          </div>
-        </div>
-
-        <br />
-
-        <div class="row">
-          <div class="col form-group">
-            <label for="company">Company name</label>
-            <input type="text" class="form-control" id="company" placeholder="" required />
-          </div>
-        </div>
-
-        <br />
-
-        <div class="row">
-					<div class="col-sm-12 col-md-4" id="md-margin-bottom">
-            <button type="submit" class="btn btn-primary" id="sendRequest" data-dismiss="modal">Register</button>
-          </div>
-					<div class="col-sm-12 col-md-8">
-            <div id="alertArea"></div>
-          </div>
-        </div>
-
-      </form>
+        <div class="col-md-2"></div>
+      </div>
 
       <hr class="featurette-divider" />
 
+      <div class="row featurette">
+				<div class="col-md-6" id="md-margin-bottom">
+          <img class="img-fluid" src="assets/visual-showcase-0.gif" alt="showcase" />
+        </div>
+				<div class="col-md-1"></div>
+        <div class="col-md-5">
+          <h2 class="text-muted">Beautiful animations.</h2>
+          <p class="lead">
+            Create gorgeous animations and stunning visualizations with little to no effort.
+          </p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider" />
+
+      <div class="row featurette">
+				<div class="col-md-6 order-md-3" id="md-margin-bottom">
+          <img class="img-fluid" src="assets/visual-showcase-1.png" alt="showcase" />
+        </div>
+				<div class="col-md-1 order-md-2"></div>
+        <div class="col-md-5 order-md-1">
+          <h2 class="text-muted">Stunning visualizations.</h2>
+          <p class="lead">
+            Your data like you've never seen it before, through visualizations that give you priceless insights.
+          </p>
+        </div>
+      </div>
+
+			<hr class="featurette-divider" />
+
+      <div class="row featurette">
+				<div class="col">
+          <h2 class="text-muted text-center">Learn more about our full-featured product lines</h2>
+        </div>
+      </div>
+
+			<br /><br />
+
+			<div class="row">
+        <div class="col d-flex justify-content-center">
+          <a role="button" href="request.html" class="btn btn-lg btn-info">Request a demo</a>
+        </div>
+      </div>
+
+			<hr class="featurette-divider" />
+
     </div>
 
-		<footer class="container">
-      <p>© <span id="ccYear">2020</span> Napkin AS · <a href="/terms.html">Terms</a></p>
+    <footer class="container">
+      <p class="float-right"><a href="#">Back to top</a></p>
+      <p>© <span id="ccYear">2020</span> Napkin AS · <a href="terms.html">Terms</a></p>
     </footer>
   </main>
 
 
-	<!-- jQuery - Popper.js - Bootstrap JS CDN imports -->
-  <script src="/lib/jquery/jquery-3.3.1.min.js"></script>
-  <script src="/lib/popper/popper.min.js"></script>
-  <script src="/lib/bootstrap/bootstrap.min.js"></script>
+  <!-- jQuery - Popper.js - Bootstrap JS CDN imports -->
+  <script src="lib/jquery/jquery-3.3.1.min.js"></script>
+  <script src="lib/popper/popper.min.js"></script>
+  <script src="lib/bootstrap/bootstrap.min.js"></script>
 
   <script type="text/javascript">
     $("span#ccYear").html(new Date().getFullYear());
   </script>
 
-  <script src="/js/register.js"></script>
-
+	</html>
 </body>
-</html>
