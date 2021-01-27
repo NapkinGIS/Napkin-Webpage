@@ -20,8 +20,9 @@
 
 "use strict";
 
+let center = [ 58.888597 , 5.718308 ]; // [ 60.381609 , 5.327975 ]
 let map = L.map("map", {
-  center: [ 60.381609, 5.327975 ],
+  center: center,
   zoom: 16
 });
 
@@ -29,12 +30,13 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors"
 }).addTo(map);
 
-L.marker([60.381109, 5.327975]).addTo(map)
+center[0] += 0.0005;
+L.marker(center).addTo(map)
   .bindPopup(`
     <h5>Napkin AS</h5>
 
     <span style=\"display: block; margin-top: 4px;\">
-      <b>Office:</b> Thormøhlens Gate 41, 5006 Bergen
+      <b>Office:</b> Grenseveien 21, 4313 Sandnes
     </span>
 
     <span style=\"display: block; margin-top: 4px;\">
