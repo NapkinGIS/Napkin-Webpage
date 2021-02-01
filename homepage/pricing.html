@@ -51,18 +51,15 @@
 	<!-- Bootstrap CSS import -->
 	<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css" />
 
-  <style type="text/css">
-    .green-text { color: #4caf50; }
+	<style type="text/css">
+		.green-text { color: #4caf50; }
 		.orange-text { color: #ff9800; }
 		.red-text { color: #f44336; }
 
-		div#pricingRow {
-			margin-top: 15px;
+		tr#row {
+			background-color: rgba(0,0,0,.05);
 		}
-
-		/*ul.featureList { margin-top: 35px; }*/
-		ul.featureList>li { margin: 15px 0; }
-  </style>
+	</style>
 
 	<!-- Custom styles -->
 	<link rel="stylesheet" href="css/main.css" />
@@ -71,192 +68,179 @@
 <body>
 
 	<header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
 
-      <a class="navbar-brand" href="index.html">
-        <img src="assets/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="Napkin logo" />
-      </a>
+			<a class="navbar-brand" href="index.html">
+				<img src="assets/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="Napkin logo" />
+			</a>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="pricing.html">Pricing <span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="about.html">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.html">Contact</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="pricing.html">Pricing <span class="sr-only">(current)</span></a>
+					</li>
+				</ul>
 
-		<a class="btn btn-outline-light" role="button" href="https://www.linkedin.com/company/napkin-as/" target="_blank" id="linkedin">
-          <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-        </a>
+				<a class="btn btn-outline-light" role="button" href="https://www.linkedin.com/company/napkin-as/" target="_blank" id="linkedin">
+					<i class="fab fa-linkedin-in" aria-hidden="true"></i>
+				</a>
 
-        <a class="btn btn-outline-light" role="button" href="https://github.com/napkingis" target="_blank" id="github">
-          <i class="fab fa-github" aria-hidden="true"></i>
-        </a>
-      </div>
+				<a class="btn btn-outline-light" role="button" href="https://github.com/napkingis" target="_blank" id="github">
+					<i class="fab fa-github" aria-hidden="true"></i>
+				</a>
+			</div>
 
-    </nav>
-  </header>
+		</nav>
+	</header>
 
 
-  <main role="main">
+	<main role="main">
 
-    <div class="container">
+		<div class="container">
 
 			<hr class="featurette-divider" style="margin-top: 0;" />
 
-      <div class="row">
-        <div class="col">
-          <h2 class="featurette-heading text-center">Our pricing plans</h2>
-          <br />
-					<p>
-            We offer installation, maintenance and support for Napkin.
-            For further information on what Napkin offers, see the <a href="about.html">about</a> page or contact us via email <a href="mailto:contact@napkingis.no?bcc=andreas@napkingis.no&subject=Site-license application">contact@napkingis.no</a>.
-          </p>
+			<div class="row">
+				<div class="col">
+					<h2 class="featurette-heading text-center">Our pricing plans</h2>
 					<br />
 					<p class="lead">
-						Napkin is pick-and-choose software suite, where you can build and design the perfect solution for your work-load. We offer three standard versions, with the ability to combine features as you see fit.
-          </p>
-        </div>
-      </div>
+						We offer installation, maintenance and support for all Napkin products.
+						For further information on what Napkin offers, see the <a href="about.html">about</a> page or contact us via email <a href="mailto:contact@napkingis.no">contact@napkingis.no</a>.
+					</p>
+					<p>
+						We charge only to cover operational costs, and all our open-source software is free to download via GitHub.
+					</p>
+				</div>
+			</div>
 
 			<br />
 
-			<div class="row" id="pricingRow">
-        <div class="col-lg-4" id="lg-margin-bottom">
+			<div class="row">
 
-					<div class="card text-center">
-						<div class="card-header">
-							<h5>Standard</h5>
-						</div>
-						<div class="card-body">
-							<h6 class="card-subtitle mb-2 text-muted">Standard feature-set</h6>
-							<br />
-							<ul class="list-unstyled featureList">
-								<li>Embeded web-map (limited) <i class="fas fa-minus orange-text ml-1"></i></li>
-								<hr />
-								<li>Integration with existing geodata <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>Integration with external data-sources <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>OGC compliant data serving <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>Geospatial database <i class="fas fa-times red-text ml-1"></i></li>
-								<hr />
-								<li>Dashboard and management system <i class="fas fa-times red-text ml-1"></i></li>
-								<hr />
-								<li>Mobile application <i class="fas fa-times red-text ml-1"></i></li>
-								<hr />
-								<li>GIS web-tools <i class="fas fa-times red-text ml-1"></i></li>
-							</ul>
-						</div>
-					</div>
+				<table class="table">
+					<!--caption>Pricing list</caption-->
+					<tbody>
 
-        </div>
-				<div class="col-lg-4" id="lg-margin-bottom">
+						<tr id="row">
+							<td>&nbsp;</td>
+							<td>
+								<strong>NapkinGIS platform</strong> <br />
+								<small>Complete open-source GIS platform – <a href="https://web.napkingis.no" target="_blank">Sign up</a></small>
+							</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>SaaS solution (per user)</td>
+							<td>$50 / month</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>On-premises installation</td>
+							<td><a href="mailto:contact@napkingis.no?cc=andreas@napkingis.no&subject=NapkinGIS – Requesting on-premises installation">Contact us</a> <br />&nbsp;</td>
+						</tr>
 
-					<div class="card text-center">
-						<div class="card-header">
-							<h5>Professional</h5>
-						</div>
-						<div class="card-body">
-							<h6 class="card-subtitle mb-2 text-muted">Advanced feature-set</h6>
-							<br />
-							<ul class="list-unstyled featureList">
-								<li>Embeded web-map (full) <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>Integration with existing geodata <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>Integration with external data-sources <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>OGC compliant data serving <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>Geospatial database <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>Dashboard and management system <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>Mobile application <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>GIS web-tools <i class="fas fa-check green-text ml-1"></i></li>
-							</ul>
-						</div>
-					</div>
+						<tr id="row">
+							<td>&nbsp;</td>
+							<td>
+								<strong>Napkin-Visual</strong> <br />
+								<small>Visualization and analysis tool – <a href="visual.html">Learn more</a></small>
+							</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>Online version</td>
+							<td>Coming soon</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>Custom integrations</td>
+							<td><a href="mailto:contact@napkingis.no?cc=andreas@napkingis.no&subject=Napkin-Visual – Requesting custom integrations">Contact us</a> <br />&nbsp;</td>
+						</tr>
 
-        </div>
-				<div class="col-lg-4" id="lg-margin-bottom">
+						<tr></tr>
 
-					<div class="card text-center">
-						<div class="card-header">
-							<h5>Enterprise</h5>
-						</div>
-						<div class="card-body">
-							<h6 class="card-subtitle mb-2 text-muted">Full feature-set</h6>
-							<br />
-							<ul class="list-unstyled featureList">
-								<li>Embeded web-map (full) <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>Integration with existing geodata <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>Integration with external data-sources <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>OGC compliant data serving <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>Geospatial database <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>Dashboard and management system <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>Mobile application <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>GIS web-tools <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>In-house deployment <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>Tailor-made extensions <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>Custom integration <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>On demand support <i class="fas fa-check green-text ml-1"></i></li>
-								<hr />
-								<li>Much, much more...</li>
-							</ul>
-						</div>
-					</div>
+						<tr id="row">
+							<td>&nbsp;</td>
+							<td>
+								<strong>Napkin-Globe</strong> <br />
+								<small>Seamless GIS data solution – <a href="about.html">Learn more</a></small>
+							</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>Online version</td>
+							<td><a href="https://globe.napkingis.no" target="_blank">Use now</a></td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>Custom installation</td>
+							<td><a href="https://github.com/NapkinGIS/Napkin-Globe/releases" target="_blank">Download here</a> <br />&nbsp;</td>
+						</tr>
 
-        </div>
-      </div>
+						<tr></tr>
 
-      <hr class="featurette-divider" />
+						<tr id="row">
+							<td>&nbsp;</td>
+							<td>
+								<strong>Napkin-Maps</strong> <br />
+								<small>Intuitive mapping solution – <a href="about.html">Learn more</a></small>
+							</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>Online version</td>
+							<td><a href="https://maps.napkingis.no" target="_blank">Use now</a></td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>Custom installation</td>
+							<td><a href="https://github.com/NapkinGIS/Napkin-Maps/releases" target="_blank">Download here</a> <br />&nbsp;</td>
+						</tr>
 
-    </div>
+					</tbody>
+				</table>
+
+			</div>
+
+			<hr class="featurette-divider" />
+
+		</div>
 
 
 
-    <footer class="container">
-      <p class="float-right"><a href="#">Back to top</a></p>
-      <p>© <span id="ccYear">2020</span> Napkin AS · <a href="terms.html">Terms</a></p>
-    </footer>
-  </main>
+		<footer class="container">
+			<p class="float-right"><a href="#">Back to top</a></p>
+			<p>© <span id="ccYear">2020</span> Napkin AS · <a href="terms.html">Terms</a></p>
+		</footer>
+	</main>
 
 
-  <!-- jQuery - Popper.js - Bootstrap JS CDN imports -->
-  <script src="lib/jquery/jquery-3.3.1.min.js"></script>
-  <script src="lib/popper/popper.min.js"></script>
-  <script src="lib/bootstrap/bootstrap.min.js"></script>
+	<!-- jQuery - Popper.js - Bootstrap JS CDN imports -->
+	<script src="lib/jquery/jquery-3.3.1.min.js"></script>
+	<script src="lib/popper/popper.min.js"></script>
+	<script src="lib/bootstrap/bootstrap.min.js"></script>
 
-  <script type="text/javascript">
-    $("span#ccYear").html(new Date().getFullYear());
-  </script>
+	<script type="text/javascript">
+		$("span#ccYear").html(new Date().getFullYear());
+	</script>
 
 </body>
 </html>

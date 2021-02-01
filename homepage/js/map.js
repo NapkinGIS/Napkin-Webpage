@@ -30,7 +30,6 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors"
 }).addTo(map);
 
-center[0] += 0.0005;
 L.marker(center).addTo(map)
   .bindPopup(`
     <h5>Napkin AS</h5>
@@ -40,11 +39,11 @@ L.marker(center).addTo(map)
     </span>
 
     <span style=\"display: block; margin-top: 4px;\">
-      <b>Phone:</b> +47 48 00 63 25
+      <b>Phone:</b> <a href=\"tel:+4748006325\">+47 48 00 63 25</a>
     </span>
 
     <span style=\"display: block; margin-top: 4px;\">
-      <b>E-mail:</b> contact@napkingis.no
+      <b>E-mail:</b> <a href=\"mailto:contact@napkingis.no\">contact@napkingis.no</a>
     </span>
   `)
   .openPopup();
