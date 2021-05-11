@@ -31,7 +31,7 @@ window.addEventListener("load", function() {
 
 		let payload = {
 			emailAddress: elems.email.value,
-			phoneNumber: elems.phone.value,
+			phoneNumber: elems.phone.value || "",
 			title: elems.title.value,
 			accountName: elems.company.value,
 			description: elems.message.value
