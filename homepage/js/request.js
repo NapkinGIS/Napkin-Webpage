@@ -40,7 +40,7 @@ window.addEventListener("load", function() {
 		let n = elems.name.value.split(/\ /ig);
 		if(n.length < 2) {
 			payload.lastName = "";
-			payload.firstName = name;
+			payload.firstName = elems.name.value;
 		}else{
 			payload.lastName = n.pop();
 			payload.firstName = n.join(' ');
