@@ -22,28 +22,33 @@
 
 let center = [ 58.888597 , 5.718308 ]; // [ 60.381609 , 5.327975 ]
 let map = L.map("map", {
-  center: center,
-  zoom: 16
+	center: center,
+	zoom: 16
 });
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution: "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors"
+	attribution: "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OSM</a>"
 }).addTo(map);
 
 L.marker(center).addTo(map)
-  .bindPopup(`
-    <h5>Napkin AS</h5>
+	.bindPopup(`
+		<h5 style=\"margin-bottom: 20px;\">Napkin AS</h5>
 
-    <span style=\"display: block; margin-top: 4px;\">
-      <b>Office:</b> Grenseveien 21, 4313 Sandnes
-    </span>
+		<span style=\"display: block; margin-top: 4px;\">
+			<b>Office:</b> Grenseveien 21, 4313 Sandnes
+		</span>
 
-    <span style=\"display: block; margin-top: 4px;\">
-      <b>Phone:</b> <a href=\"tel:+4748006325\">+47 48 00 63 25</a>
-    </span>
+		<span style=\"display: block; margin-top: 4px;\">
+			<b>Phone:</b> <a href=\"tel:+4748006325\">+47 48 00 63 25</a>
+		</span>
 
-    <span style=\"display: block; margin-top: 4px;\">
-      <b>E-mail:</b> <a href=\"mailto:contact@napkingis.no\">contact@napkingis.no</a>
-    </span>
-  `)
-  .openPopup();
+		<span style=\"display: block; margin-top: 4px;\">
+			<b>E-mail:</b> <a href=\"mailto:contact@napkingis.no\">contact@napkingis.no</a>
+		</span>
+	`, {
+		keepInView: true,
+		closeButton: false,
+		closeOnEscapeKey: false,
+		closeOnClick: false
+	})
+	.openPopup();
