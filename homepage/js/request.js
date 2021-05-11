@@ -70,9 +70,9 @@ window.addEventListener("load", function() {
 						</div>
 					`);
 
-					/*setTimeout(function() {
-						window.location.assign("/");
-					}, 6000);*/
+					setTimeout(function() {
+						window.location.assign("index.html");
+					}, 6000);
 				}, 500);
 			},
 			error: function(xhr, status, error) {
