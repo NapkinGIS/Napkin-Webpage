@@ -65,11 +65,18 @@
 			margin-top: 0 !important;
 		}
 
+		#align-center,
+		#align-center * {
+			text-align: center;
+		}
+
 		#coverJumbotron {
 			background-image: url("assets/jumbotron.gif");
 			background-position: top;
 			background-repeat: no-repeat;
 			background-size: cover;
+
+			height: 250px;
 		}
 
 		#jumbotronText {
@@ -78,9 +85,27 @@
 			-webkit-font-smoothing: antialiased;
 		}
 
-		#customerImg {
+		#showcaseImg {
 			margin-bottom: 15px;
-			opacity: 0.5;
+			border-radius: 15px;
+			opacity: 0.4;
+			transition: opacity 0.4s ease-in-out;
+		}
+		#showcaseImg:hover,
+		#showcaseImg:focus {
+			opacity: 1;
+		}
+
+		@media (max-width: 991.98px) {
+			#coverJumbotron {
+				height: 350px;
+			}
+		}
+
+		@media (max-width: 767.98px) {
+			#coverJumbotron {
+				height: 450px;
+			}
 		}
 	</style>
 
@@ -108,9 +133,6 @@
 							<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="products.html">Products</a>
-						</li>
-						<li class="nav-item">
 							<a class="nav-link" href="about.html">About</a>
 						</li>
 						<li class="nav-item">
@@ -134,13 +156,8 @@
 		<div class="jumbotron shadow" id="coverJumbotron">
 			<div class="container">
 				<h1 id="jumbotronText">
-					High powered visualizations
+					High powered map-visualizations
 				</h1>
-				<h5 id="jumbotronText">
-					We deliver high powered visualizations using our <br />
-					<strong>Napkin-Visual</strong> product
-				</h5>
-				<br /><br /><br /><br /><br /><br /><br />
 			</div>
 		</div>
 
@@ -150,161 +167,151 @@
 
 			<div class="row">
 				<div class="col">
-					<h2 class="featurette-heading text-muted">Napkin technology company</h2>
+					<h2 class="featurette-heading text-muted">What we do</h2>
 					<p class="lead">
-						Napkin is a technology company delivering high powered visualizations using our
-						Napkin-Visual product, along with GIS and blockchain services.
-						We help you bring your data to life and gain priceless insight.
+						We deliver <strong>web-based, interactive and dynamic map-visualizations</strong> using your data.
+						With <strong>Napkin-Visual</strong>, we help you bring your data to life and gain priceless insight.
 					</p>
 				</div>
 			</div>
 
 
 
-			<hr class="featurette-divider" />
-
-
-
-			<div class="row">
-				<div class="col-md-6 order-md-3">
-					<h2 class="featurette-heading text-muted">High powered visualizations</h2>
-					<p class="lead">
-						<strong>Napkin-Visual</strong> is a powerful and intuitive spatial analysis tool
-						that enables you to gain priceless insight into your data.
-						It is a web-based map solution that can be deployed and integrated anywhere,
-						from websites to mobile apps.
-					</p>
-					<p class="lead">
-						<a href="products.html#demos">Demos</a>
-					</p>
-				</div>
-				<div class="col-md-1 order-md-2"></div>
-				<div class="col-md-5 order-md-1" id="md-margin-bottom">
-					<img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="assets/visual-showcase-0.gif" />
-				</div>
-			</div>
-
-
-
-			<hr class="featurette-divider" />
+			<hr class="featurette-divider" id="featurelist" />
 
 
 
 			<div class="row">
 				<div class="col">
-					<h3 class="text-center">Partners and customers</h3>
-				</div>
-			</div>
+					<h2 class="featurette-heading text-muted" id="align-center">Napkin-Visual is ...</h2>
 
-			<br /><br />
+					<br /><br />
 
-			<div class="row">
-				<div class="col-lg-3 mb-3">
-					<center>
-						<a href="https://www.nfgi.no/" target="_blank">
-							<img
-								class="bd-placeholder-img rounded-circle"
-								src="assets/logo-nfgi.jpg"
-								width="80"
-								height="80"
-								id="customerImg"
-							/>
-						</a>
-						<p>
-							Norsk Forening for Grønn Infrastruktur <br />
-							<i>Customer</i>
-						</p>
-					</center>
-				</div>
+					<div class="row" id="align-center">
+						<div class="col-md-4 col-sm-12">
+							<p class="lead"><strong style="color: #002b80;">Dynamic</strong> with visualizations of real-time data</p>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<p class="lead"><strong style="color: #002b80;">Powerful</strong> with visualizations of historical data</p>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<p class="lead"><strong style="color: #002b80;">Interactive</strong> with visualizations of static data</p>
+						</div>
+					</div>
 
-				<div class="col-lg-3 mb-3">
-					<center>
-						<a href="https://www.aegeenergysolutions.com/" target="_blank">
-							<img
-								class="bd-placeholder-img rounded-circle"
-								src="assets/logo-aege.png"
-								width="80"
-								height="80"
-								id="customerImg"
-							/>
-						</a>
-						<p>
-							Æge energy solutions <br />
-							<i>Customer</i>
-						</p>
-					</center>
-				</div>
+					<br />
 
-				<div class="col-lg-3 mb-3">
-					<center>
-						<a href="https://trefadder.no/" target="_blank">
-							<img
-								class="bd-placeholder-img rounded-circle"
-								src="assets/logo-trefadder.png"
-								width="80"
-								height="80"
-								id="customerImg"
-							/>
-						</a>
-						<p>
-							Trefadder <br />
-							<i>Customer</i>
-						</p>
-					</center>
-				</div>
-
-				<div class="col-lg-3">
-					<center>
-						<a href="https://friendos.com/" target="_blank">
-							<img
-								class="bd-placeholder-img rounded-circle"
-								src="assets/logo-friend.png"
-								width="80"
-								height="80"
-								id="customerImg"
-							/>
-						</a>
-						<p>
-							Friend Software Corporation <br />
-							<i>Partner</i>
-						</p>
-					</center>
+					<div class="row" id="align-center">
+						<div class="col-md-4 col-sm-12">
+							<p class="lead">Completely <strong style="color: #267326;">customizable</strong>, with tailored features</p>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<p class="lead">Exclusively based on <strong style="color: #267326;">open-source</strong> software</p>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<p class="lead"><strong style="color: #267326;">Deployable anywhere</strong>, from websites and mobile apps to private presentations</p>
+						</div>
+					</div>
 				</div>
 			</div>
 
 
 
-			<hr class="featurette-divider" />
+			<hr class="featurette-divider" id="video" />
 
 
 
 			<div class="row">
-				<div class="col-lg-4" id="lg-margin-bottom">
-					<h3 style="margin-bottom: 15px;">
-						<i class="fa fa-cubes" aria-hidden="true" style="color: #0052cc;"></i>
-						<span class="text-muted">Deployment</span>
-					</h3>
-					<p>
-						We deliver Napkin-Visual as a digital web-map that can be deploy in other systems, such as websites and mobile apps.
-					</p>
+				<div class="col-md-2"></div>
+				<div class="col-md-8">
+					<div class="embed-responsive embed-responsive-16by9">
+						<video controls poster="assets/jumbotron.png">
+							<source src="https://crm.napkingis.no/napkin/napkin_visual_1080.mp4" type="video/mp4" />
+							Your browser does not support the video tag.
+						</video>
+					</div>
 				</div>
-				<div class="col-lg-4" id="lg-margin-bottom">
-					<h3 style="margin-bottom: 15px;">
-						<i class="fa fa-server" aria-hidden="true" style="color: #595959;"></i>
-						<span class="text-muted">Integration</span>
-					</h3>
-					<p>
-						Napkin-Visual can be integrated with any data provider or API, and can visualize both historic and real-time data.
-					</p>
-				</div>
-				<div class="col-lg-4" id="lg-margin-bottom">
-					<h3 style="margin-bottom: 15px;">
-						<i class="fa fa-user" aria-hidden="true" style="color: #009900;"></i>
-						<span class="text-muted">Support</span>
-					</h3>
-					<p>
-						We offer full support to our customers, including import of additional data, data formatting and custom features.
-					</p>
+				<div class="col-md-2"></div>
+			</div>
+
+
+
+			<hr class="featurette-divider" id="demos" />
+
+
+
+			<div class="row">
+				<div class="col">
+					<h2 class="featurette-heading text-muted" id="align-center">Check out some live-demos</h2>
+
+					<br /><br />
+
+					<div class="row">
+						<div class="col-md-4 col-sm-12" id="md-margin-bottom">
+							<a href="https://visual.napkingis.no/flights.html" target="_blank">
+								<img src="assets/showcase-flights.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" id="showcaseImg" />
+							</a>
+							<p class="text-muted" id="align-center">Real-time flight data</p>
+						</div>
+						<div class="col-md-4 col-sm-12" id="md-margin-bottom">
+							<a href="https://visual.napkingis.no/exchangerate.html" target="_blank">
+								<img src="assets/showcase-exchange-rate.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" id="showcaseImg" />
+							</a>
+							<p class="text-muted" id="align-center">Real-time global currency exchange rates</p>
+						</div>
+						<div class="col-md-4 col-sm-12" id="md-margin-bottom">
+							<a href="https://visual.napkingis.no/twitter.html" target="_blank">
+								<img src="assets/showcase-tweets.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" id="showcaseImg" />
+							</a>
+							<p class="text-muted" id="align-center">Real-time tweets on top global topics</p>
+						</div>
+					</div>
+
+					<br />
+
+					<div class="row">
+						<div class="col-md-4 col-sm-12" id="md-margin-bottom">
+							<a href="https://visual.napkingis.no/covid-usa.html" target="_blank">
+								<img src="assets/showcase-covid-usa.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" id="showcaseImg" />
+							</a>
+							<p class="text-muted" id="align-center">COVID-19 cases in the United States</p>
+						</div>
+						<div class="col-md-4 col-sm-12" id="md-margin-bottom">
+							<a href="https://visual.napkingis.no/earthquakes.html" target="_blank">
+								<img src="assets/showcase-earthquakes.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" id="showcaseImg" />
+							</a>
+							<p class="text-muted" id="align-center">Earthquakes in California since 1967</p>
+						</div>
+						<div class="col-md-4 col-sm-12" id="md-margin-bottom">
+							<a href="https://visual.napkingis.no/taxi.html" target="_blank">
+								<img src="assets/showcase-taxi.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" id="showcaseImg" />
+							</a>
+							<p class="text-muted" id="align-center">Uber taxi-stops in New-York City</p>
+						</div>
+					</div>
+
+					<br />
+
+					<div class="row">
+						<div class="col-md-4 col-sm-12" id="md-margin-bottom">
+							<a href="https://visual.napkingis.no/unemployment.html" target="_blank">
+								<img src="assets/showcase-unemployment.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" id="showcaseImg" />
+							</a>
+							<p class="text-muted" id="align-center">Unemployment statistics in the United States</p>
+						</div>
+						<div class="col-md-4 col-sm-12" id="md-margin-bottom">
+							<a href="https://visual.napkingis.no/bitcoin-network.html" target="_blank">
+								<img src="assets/showcase-bitcoin.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" id="showcaseImg" />
+							</a>
+							<p class="text-muted" id="align-center">The Bitcoin node-network</p>
+						</div>
+						<div class="col-md-4 col-sm-12" id="md-margin-bottom">
+							<a href="https://visual.napkingis.no/lightning-network.html" target="_blank">
+								<img src="assets/showcase-lightning.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" id="showcaseImg" />
+							</a>
+							<p class="text-muted" id="align-center">The Bitcoin Lightning network</p>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -330,32 +337,36 @@
 			<div class="row">
 				<div class="col-md-3 col-sm-12">
 					<p>
-						© <span id="ccYear">2021</span> Napkin AS ·
+						© <span id="ccYear">2021</span> Napkin AS
+					</p>
 
-						<a href="https://www.linkedin.com/company/napkin-as/" target="_blank" id="linkedin">
+					<p style="margin-bottom: 25px;">
+						<a role="button" class="btn btn-light" href="https://www.linkedin.com/company/napkin-as/" target="_blank" id="linkedin">
 							<i class="fab fa-linkedin-in" aria-hidden="true"></i>
 						</a>
-						<a href="https://github.com/napkingis" target="_blank" id="github">
+
+						<a role="button" class="btn btn-light" href="https://github.com/napkingis" target="_blank" id="github">
 							<i class="fab fa-github" aria-hidden="true"></i>
 						</a>
 					</p>
 				</div>
 
 				<div class="col-md-3 col-sm-12">
-					<h5>Products</h5>
+					<h5>Home</h5>
 					<ul class="list-unstyled text-small">
-						<li><a class="text-muted" href="products.html#visual">Napkin-Visual</a></li>
-						<li><a class="text-muted" href="products.html#blockchain">Blockchain services</a></li>
-						<li><a class="text-muted" href="products.html#gis">GIS services</a></li>
+						<li><a class="text-muted" href="index.html#featurelist">Feature list</a></li>
+						<li><a class="text-muted" href="index.html#video">Video</a></li>
+						<li><a class="text-muted" href="index.html#demos">Demos</a></li>
 					</ul>
 				</div>
+
 				<div class="col-md-3 col-sm-12">
 					<h5>About</h5>
 					<ul class="list-unstyled text-small">
 						<li><a class="text-muted" href="about.html#company">Company</a></li>
-						<li><a class="text-muted" href="about.html#team">Team</a></li>
 					</ul>
 				</div>
+
 				<div class="col-md-3 col-sm-12">
 					<h5>Contact</h5>
 					<ul class="list-unstyled text-small">
