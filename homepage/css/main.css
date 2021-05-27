@@ -46,9 +46,10 @@ textarea {
   -webkit-border-radius: 0 !important;
 }
 
-a#linkedin,
+/*a#linkedin,*/
+a#twitter,
 a#github {
-  margin-left: 25px;
+  margin-left: 5px;
 }
 
 @media (max-width: 768px) {
