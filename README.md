@@ -1,3 +1,3 @@
 # Napkin-Homepage
 
-Codebase for [napkingis.no](https://napkingis.no)
+Codebase for [napkin.no](https://napkin.no)

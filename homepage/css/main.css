@@ -1,6 +1,6 @@
 /*©agpl*************************************************************************
 *                                                                              *
-* Napkin Homepage – Codebase for the napkingis.no homepage                     *
+* Napkin Homepage – Codebase for the napkin.no homepage                        *
 * Copyright (C) 2020  Napkin AS                                                *
 *                                                                              *
 * This program is free software: you can redistribute it and/or modify         *
